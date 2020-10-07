@@ -1,3 +1,25 @@
 body{
     background-image: url( http://img.netbian.com/file/2020/0929/64167bde4e1c47407b0be009c21c8690.jpg);
 }
+
+.p1{
+    display: block;
+    height: 200px;
+    font-weight: bold;
+    color: salmon;
+    font-size: 40px !important;
+    position: relative;
+    top: 450px;
+    left: 100px;
+}
+
+.p2{
+    display: block;
+    height: 200px;
+    font-weight: bold;
+    color: salmon;
+    font-size: 40px !important;
+    position: relative;
+    top: 400px;
+    left: 150px;
+}
