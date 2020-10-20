@@ -1,45 +1,40 @@
-<!doctype html>
-<html lang="zh">
-  <head>
-    <meta charset="utf-8">
-    <script src="https://imgcache.qq.com/qcloud/tcbjs/1.9.0/tcb.js"></script>
-    <script src="./main.js"></script>
-    <script>//腾讯分析
-      var _mtac = {};
-      (function() {
-        var mta = document.createElement("script");
-        mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
-        mta.setAttribute("name", "MTAH5");
-        mta.setAttribute("sid", "500730963");
-  
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(mta, s);
-      })();
-     </script>
-  </head>
-  <body style="text-align:center;">
-    <header>
-    </header>
-    <div style="margin: 0 30%; padding: 20px 0; border: solid;">
-      <h3>录入成绩</h3>
-      <form>
-        姓名:<br>
-        <input id="add-name">
-        <br>
-        成绩(0-100):<br>
-        <input id="add-score">
-        <br><br>
-        <button id="add-button">录入</button>
-      </form>
-      <h3>查询成绩</h3>
-      <form>
-        姓名:<br>
-        <input id="query-name">
-        <br><br>
-        <button id="query-button">查询个人</button>
-        <br><br>
-      </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>加油！谢同学！</title>
+</head>
+  <style>
+    .box{
+      margin: 100px auto;
+      width: 300px;
+      height: 500px;
+      background-color: cadetblue;
+      text-align: center;
+      padding-top: 30px;
+    }
     
+    .box .text{
+      margin-top: 50px;
+      font-size: 70px;
+      font-weight: bold;
+      color: white;
+    }
+    .box .title{
+      margin-top: 100px;
+      font-size: 40px;
+      font-weight: bold;
+      height: 100px;
+      line-height: 100px;
+      color: rgb(44, 42, 46);
+      background-color: rgba(230, 227, 227, 0.596);
+    }
+  </style>
+<body>
+    <div class="box">
+      <span class="text">谢<br> 同<br>学</span>
+      <div class="title">加 油 加 油！</div>
     </div>
-  </body>
+</body>
 </html>
