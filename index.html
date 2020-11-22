@@ -10,42 +10,61 @@
     <link rel="stylesheet" href="./share/index.css">
     <link rel="stylesheet" href="./share/repeat.css">
 </head>
-
 <body>
+    
     <div class="wrap">
         <div class="box">
+            <div class="top-nav"></div>
             <div class="box-hd">
-
+                <div class="top-search">
+                    <input class="search" type="text" id="slide" onkeyup="myfunction()" placeholder="输入后按回车查询" >
+                    <button class="cx" type="button"  onkeyup="myfunction()">查询</button>
+                </div>
+                <div class="notice">
+                    <div class="gg">公告</div>
+                    <p class="txt">通知内容</p>
+                    <p class="txt">通知内容</p>
+                </div>
             </div>
             <div class="box-bd">
-                <input type="text" id="inputv" onkeyup="myfunction()" placeholder="搜索...">
-                <ul id="ul1">
-                    <li><a href="#" class="first">腾讯王卡</a></li>
+                <ul id="list">
+                    <li><a href="#" class="firt">腾讯王卡</a></li>
                     <li><a href="#">adobe</a></li>
                     <li><a href="#">apple</a></li>
                     <li><a href="#">asus</a></li>
                     <li><a href="#">amando</a></li>
-                    <li><a href="#" class="first">B</a></li>
+                    <li><a href="#" class="firt">B</a></li>
                     <li><a href="#">benz</a></li>
                     <li><a href="#">bmz</a></li>
                     <li><a href="#">bing</a></li>
-                    <li><a href="#" class="first">C</a></li>
+                    <li><a href="#" class="firt">C</a></li>
                     <li><a href="#">cat</a></li>
                     <li><a href="#">carmon</a></li>
-                    <li><a href="#" class="first">D</a></li>
+                    <li><a href="#" class="firt">D</a></li>
                     <li><a href="#">document</a></li>
                     <li><a href="#">dahua</a></li>
+                </ul> 
+            </div>
+            <div class="box-ft">
+                <ul id="list">
+                <li><a href="#" class="first"><span>腾讯王卡</span></a>
+                    <img id="77" src=" http://r.photo.store.qq.com/psc?/V52EBLlE2IOCJp3qS4Qn03S0oG3SFEAS/TmEUgtj9EK6.7V8ajmQrEM4hBKc95aU.6cnnJYZQWSBqbbT6WNxDtZMx3cdFqt2IBSkuUl2OZLd9gfuF24elWIdYE6tsPeHqX6hBamPgPBk!/r "  alt=" 王卡骑手版 " />
+                </li>
+                <li><a href="#" class="first"><span>骑手</span></a>
+                    <img id="77" src=" http://r.photo.store.qq.com/psc?/V52EBLlE2IOCJp3qS4Qn03S0oG3SFEAS/TmEUgtj9EK6.7V8ajmQrEDMlVROHKMgQqgwH44XSTMZO19kuVcDT3U5MUO77W0bBXDdoyqczeCVRo9SdIHNlXoNkBnh66UG1XQaFqzqsMDE!/r "  alt="  " />
+            
+                    
+                </li>
                 </ul>
             </div>
-            <div class="box-ft"></div>
         </div>
     </div>
     <script>//模糊查询，感谢“一个人乐的小兔子”
         function myfunction() {
-            var input, filter, ul, li, a;
-            inputv = $("#inputv");
-            filter = inputv.val().toUpperCase(); //将字符串中每个字符转换成大写
-            li = $("#ul1>li");
+            var input, filter, ul, li, a ,img;
+            slide = $("#slide");
+            filter = slide.val().toUpperCase(); //将字符串中每个字符转换成大写
+            li = $("#list>li");
             $(li).each(function (i) {
                 var a = $(this).find("a");
                 if (a.html().toUpperCase().indexOf(filter) > -1) {

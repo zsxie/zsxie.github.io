@@ -1,3 +1,81 @@
+@media  (max-width: 800px) {
+            .box {
+               width: 100%;
+               background-color: wheat;
+            }
+        }
 html{
     font-size: 14px;
+}
+.top-bar{
+   
+}
+/** 中间盒 **/
+.box{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    box-shadow: 0 1px 6px #ccc;
+    margin-top: 80px;
+    position: relative;
+}
+/** 搜索框 **/
+.box .box-hd .top-search .search , .cx{
+    height: 30px;
+    float: left;
+    outline: none;
+    border: none;
+    border: 1px solid #b9b3b3;
+}
+.box .box-hd .top-search .search{
+    border-right: none;
+    padding: 5px;
+}
+.box .box-hd .top-search .cx{
+    height: 42px;
+    float: left;
+    background-color: white;
+}
+
+.box .box-hd .top-search .cx:hover{
+    background-color: #ccc;
+}
+
+.box .box-hd .top-search .search:hover ,
+.box .box-hd .top-search .search:hover + button {
+    border-color:  #928f8f;
+}
+
+.box .box-hd .top-search .search:focus ,
+.box .box-hd .top-search .search:focus + button {
+    border-color:  #ff6700;
+}
+
+/** 公告框 **/
+.box .notice{
+    position: relative;
+    width: 100%;
+    border: 1px solid #928f8f;
+    clear:both;
+}
+.box .notice .txt{
+    padding: 10px;
+}
+.box .notice .gg{
+    position: absolute;
+    width: 5%;
+    height: 20px;
+    top: -15%;
+    left: 50%;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+
+}
+span{
+   display: none;
+}
+img{
+    width: 900px;
 }
