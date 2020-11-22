@@ -1,0 +1,6 @@
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+} /*高度塌陷及外边距重叠*/
