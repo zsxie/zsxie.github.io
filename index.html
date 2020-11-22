@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CQDD业务查询</title>
+    <script src="./jQuery/jquery-2.2.2.min.js"></script>
     <link rel="stylesheet" href="./share/reset.css">
     <link rel="stylesheet" href="./share/index.css">
     <link rel="stylesheet" href="./share/repeat.css">
 </head>
+
 <body>
-    
+    <div class="wrap">
+        <div class="box">
+            <div class="box-hd">
+
+            </div>
+            <div class="box-bd">
+                <input type="text" id="inputv" onkeyup="myfunction()" placeholder="搜索...">
+                <ul id="ul1">
+                    <li><a href="#" class="first">腾讯王卡</a></li>
+                    <li><a href="#">adobe</a></li>
+                    <li><a href="#">apple</a></li>
+                    <li><a href="#">asus</a></li>
+                    <li><a href="#">amando</a></li>
+                    <li><a href="#" class="first">B</a></li>
+                    <li><a href="#">benz</a></li>
+                    <li><a href="#">bmz</a></li>
+                    <li><a href="#">bing</a></li>
+                    <li><a href="#" class="first">C</a></li>
+                    <li><a href="#">cat</a></li>
+                    <li><a href="#">carmon</a></li>
+                    <li><a href="#" class="first">D</a></li>
+                    <li><a href="#">document</a></li>
+                    <li><a href="#">dahua</a></li>
+                </ul>
+            </div>
+            <div class="box-ft"></div>
+        </div>
+    </div>
+    <script>//模糊查询，感谢“一个人乐的小兔子”
+        function myfunction() {
+            var input, filter, ul, li, a;
+            inputv = $("#inputv");
+            filter = inputv.val().toUpperCase(); //将字符串中每个字符转换成大写
+            li = $("#ul1>li");
+            $(li).each(function (i) {
+                var a = $(this).find("a");
+                if (a.html().toUpperCase().indexOf(filter) > -1) {
+                    $(this).css("display", "");
+                } else {
+                    $(this).css("display", "none");
+                }
+            });
+        }
+    </script>
 </body>
+
 </html>
