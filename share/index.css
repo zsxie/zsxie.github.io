@@ -7,9 +7,9 @@
         }
     }
 }
-html{
+html , body{
     font-size: 14px;
-  
+    font-family:  "微软雅黑";
 }
 .top-bar{
    
@@ -75,7 +75,7 @@ html{
 
 /** 公告框 **/
 .box .notice{
-    position: relative;
+    margin-top: 10px;
     width: 100%;
     border: 1px solid #928f8f;
     clear:both;
@@ -95,14 +95,35 @@ html{
     border-radius: 10px;
 
 }
+/** 产品框 **/
 .box-bd .cp-list{
     display: flex;
-    width: 100%;
-    padding: ;
+    width: 880px;
+    padding: 10px;
     flex-direction: row;
     flex-wrap: wrap;
     border: 1px solid red;
-
+    border-radius: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    
+   
+}
+.box-bd .cp-list li{
+    padding-top:  10px;
+}
+/** 产品框字体 **/
+.box-bd .cp-list li > a{
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #006DC9;
+}
+.box-bd .cp-list li > a::after{
+    content: '|';
+    color: salmon;
+    padding: 5px;
+   
 }
 img{
     width: 900px;
