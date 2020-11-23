@@ -1,18 +1,22 @@
-@media  (min-width: 800px) {
-            div.box {
-               width: 900px;
-               background-color: wheat;
-            }
+
+@media only screen{
+    @media (max-width: 768px){
+        .box{
+           width: 100%;
+           height: 100px;
         }
+    }
+}
 html{
     font-size: 14px;
+  
 }
 .top-bar{
    
 }
 /** 中间盒 **/
 .box{
-    width: 100%;
+    width: 900px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
@@ -20,7 +24,24 @@ html{
     margin-top: 80px;
     position: relative;
 }
+/** top返回顶部 **/
+.top{
+  position: fixed;
+  top: 95%;
+  left: 70%;
+  width: 40px;
+  z-index: 999;
+  text-align: center;
+  border-radius: 5px;
+  background-color: tomato;
+}
+.top .top-wz{
+    color: white;
+}
 /** 搜索框 **/
+.box .box-hd .top-search .search{
+    width: 30%;  
+}
 .box .box-hd .top-search .search , .cx{
     height: 30px;
     float: left;
@@ -58,6 +79,7 @@ html{
     width: 100%;
     border: 1px solid #928f8f;
     clear:both;
+    border-radius: 5px;
 }
 .box .notice .txt{
     padding: 10px;
@@ -73,6 +95,19 @@ html{
     border-radius: 10px;
 
 }
+.box-bd .cp-list{
+    display: flex;
+    width: 100%;
+    padding: ;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid red;
+
+}
 img{
     width: 900px;
+}
+/** 隐藏产品名 **/
+.cp-name{
+    opacity: 0;
 }
