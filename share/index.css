@@ -11,6 +11,13 @@ html , body{
     font-size: 14px;
     font-family:  "微软雅黑";
 }
+/*高度塌陷及外边距重叠*/
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+} 
 .top-bar{
    
 }
@@ -26,46 +33,76 @@ html , body{
 }
 /** top返回顶部 **/
 .top{
-  position: fixed;
-  top: 95%;
-  left: 70%;
-  width: 40px;
-  z-index: 999;
-  text-align: center;
-  border-radius: 5px;
-  background-color: tomato;
+     position: fixed;
+     top: 92%;
+     left: 80%;
+     width: 60px;
+     z-index: 999;
+     text-align: center;
+     border-radius: 5px;
+     background-color: tomato;
+     width: 50px;
+     height: 50px;
+     line-height: 50px;
+     text-align: center;
+     cursor: pointer;
+     opacity: .5;
+     
+}
+.top a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
 }
 .top .top-wz{
     color: white;
 }
 /** 搜索框 **/
-.box .box-hd .top-search .search{
-    width: 30%;  
+.top-search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.box .box-hd .top-search .search , .cx{
+.box .box-hd .top-search .search{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.box .box-hd .top-search .search {
     height: 30px;
     float: left;
     outline: none;
     border: none;
-    border: 1px solid #b9b3b3;
+    border: 2px solid #b9b3b3;
 }
 .box .box-hd .top-search .search{
     border-right: none;
-    padding: 5px;
+    padding: 10px;
+    font-size: 20px;
 }
 .box .box-hd .top-search .cx{
-    height: 42px;
-    float: left;
-    background-color: white;
-}
-
-.box .box-hd .top-search .cx:hover{
-    background-color: #ccc;
+    height: 54px;
+    display: inline-block;
+    line-height: 53px;
+    padding: 0 18px;
+    background-color: #fff;
+    color: #000;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+   
 }
 
 .box .box-hd .top-search .search:hover ,
 .box .box-hd .top-search .search:hover + button {
-    border-color:  #928f8f;
+    border-color:  #334DFF;
+}
+.box .box-hd .top-search .cx:hover{
+    border-color:  #334DFF;
 }
 
 .box .box-hd .top-search .search:focus ,
@@ -75,6 +112,8 @@ html , body{
 
 /** 公告框 **/
 .box .notice{
+    position: relative;
+    margin-bottom: 10px;
     margin-top: 10px;
     width: 100%;
     border: 1px solid #928f8f;
@@ -82,13 +121,13 @@ html , body{
     border-radius: 5px;
 }
 .box .notice .txt{
-    padding: 10px;
+    padding: 5px;
 }
 .box .notice .gg{
     position: absolute;
     width: 5%;
     height: 20px;
-    top: -15%;
+    top: -50%;
     left: 50%;
     background-color: white;
     text-align: center;
@@ -98,37 +137,52 @@ html , body{
 /** 产品框 **/
 .box-bd .cp-list{
     display: flex;
-    width: 880px;
-    padding: 10px;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 1px solid red;
+    border: 2px solid red;
     border-radius: 10px;
     margin-top: 10px;
     justify-content: center;
-    
-   
 }
 .box-bd .cp-list li{
-    padding-top:  10px;
+    /* padding-top:  10px; */
+    margin-top: 5px;
+}
+
+/** 产品框移入效果 **/
+.box-bd .cp-list li:hover {
+    /* display: block; */
+    background-color: #FF5722;
+    border-radius: 10px;
+    
+}
+.box-bd .cp-list li > a:hover{
+    color: white;
 }
 /** 产品框字体 **/
 .box-bd .cp-list li > a{
     font-size: 20px;
+    line-height: 30px;
     text-decoration: none;
     font-weight: bold;
     color: #006DC9;
+    padding: 10px;
 }
-.box-bd .cp-list li > a::after{
+/* .box-bd .cp-list li > a::after{
     content: '|';
     color: salmon;
     padding: 5px;
    
-}
-img{
+} */
+
+.box-ft a + img{
     width: 900px;
 }
 /** 隐藏产品名 **/
-.cp-name{
+.box-ft a.cp-name{
     opacity: 0;
+    font-size: 1px;
 }
