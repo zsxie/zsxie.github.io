@@ -1,14 +1,13 @@
 
 @media only screen{
-    @media (max-width: 768px){
+    @media (max-width: 960px){
         .box{
            width: 100%;
-           height: 100px;
         }
     }
 }
 html , body{
-    font-size: 14px;
+    font-size: 20px;
     font-family:  "微软雅黑";
 }
 /*高度塌陷及外边距重叠*/

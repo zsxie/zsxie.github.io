@@ -8,7 +8,25 @@
     <script src="./jQuery/jquery-2.2.2.min.js"></script>
     <link rel="stylesheet" href="./share/reset.css">
     <link rel="stylesheet" href="./share/index.css">
-    <link rel="stylesheet" href="./share/repeat.css">
+    <script>//通过window.screen.width获取屏幕的宽度
+        var offWidth = window.screen.width / 30; //这里用宽度/30表示1rem取得的px
+        document.getElementsByTagName("html")[0].style.fontSize = offWidth + 'px'; //把rem的值复制给顶级标签html的font-size
+    </script>
+    <script type="text/javascript">
+        (function (doc, win) {
+           var docEl = doc.documentElement,
+             resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+             recalc = function () {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+               docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';//其中“20”根据你设置的html的font-size属性值做适当的变化
+             };
+     
+           if (!doc.addEventListener) return;
+           win.addEventListener(resizeEvt, recalc, false);
+           doc.addEventListener('DOMContentLoaded', recalc, false);
+         })(document, window);
+     </script>
 </head>
 <body>
     <div class="wrap">
