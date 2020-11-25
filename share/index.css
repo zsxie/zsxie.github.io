@@ -1,13 +1,11 @@
 
-@media only screen{
-    @media (max-width: 960px){
-        .box{
-           width: 100%;
-        }
-    }
+@media only screen and (min-width: 1200px ) { 
+    .box { 
+        width: 100%;
+    } 
 }
 html , body{
-    font-size: 20px;
+    font-size: 15px;
     font-family:  "微软雅黑";
 }
 /*高度塌陷及外边距重叠*/
@@ -17,9 +15,62 @@ html , body{
     display: table;
     clear: both;
 } 
+/** 顶部的灰色菜单 **/
 .top-bar{
-   
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 30px;
+    background-color: #e7e7e7;
 }
+.top-bar .top-bar2 {
+    width: 900px;
+    height: 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  #time , #con{
+      line-height: 30px;
+  }
+/** 顶部导航菜单 **/
+.top-dh{
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    height: 45px;
+    z-index: 99;
+    border: 1px solid #c50505;
+    background-color: #c50505;
+}
+.top-dh .top-dh2{
+    width: 900px;
+    height: 45px;
+    margin: 0 auto;
+    background-color: #c50505;
+}
+.top-dh .top-dh2 ul{
+    display: flex;
+    line-height: 45px;
+    justify-content: space-between;
+}
+
+.top-dh .top-dh2 .nav-wz li > a{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    height: 45px;
+    padding: 0 10px 0 10px;
+}
+/** 顶部导航菜单移入效果 **/
+.top-dh .top-dh2 .nav-wz li > a:hover{
+    background-color:#FBEDED;
+    color: #c50505; 
+}
+
 /** 中间盒 **/
 .box{
     width: 900px;
@@ -27,7 +78,7 @@ html , body{
     margin-right: auto;
     padding: 10px;
     box-shadow: 0 1px 6px #ccc;
-    margin-top: 80px;
+    margin-top: 85px;
     position: relative;
 }
 /** top返回顶部 **/
@@ -52,6 +103,7 @@ html , body{
     display: block;
     width: 50px;
     height: 50px;
+    line-height: 50px;
     text-decoration: none;
 }
 .top .top-wz{
@@ -74,7 +126,7 @@ html , body{
     float: left;
     outline: none;
     border: none;
-    border: 2px solid #b9b3b3;
+    border: 2px solid #ff6700;
 }
 .box .box-hd .top-search .search{
     border-right: none;
@@ -93,7 +145,7 @@ html , body{
     font-size: 14px;
     cursor: pointer;
     outline: none;
-   
+    border-color: #ff6700;
 }
 
 .box .box-hd .top-search .search:hover ,
