@@ -2,6 +2,9 @@ html , body{
     font-size: 15px;
     font-family:  "微软雅黑";
 }
+.wrap{
+    width: 100%;
+}
 /*高度塌陷及外边距重叠*/
 .clearfix::before,
 .clearfix::after{
@@ -23,8 +26,9 @@ html , body{
     width: 900px;
     height: 30px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+  }
+  .time-bt{
+    
   }
   #time , #con{
       line-height: 30px;
@@ -231,7 +235,7 @@ html , body{
 
 /** 产品图片框 **/
 .box-ft a + img{
-    width: 900px;
+    width: 100%;
     z-index: 0;
 }
 /** 隐藏产品名 **/
