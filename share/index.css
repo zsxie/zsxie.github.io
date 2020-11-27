@@ -27,11 +27,22 @@ html , body{
     height: 30px;
     margin: 0 auto;
   }
-  .time-bt{
-    
-  }
   #time , #con{
-      line-height: 30px;
+    line-height: 30px;
+}
+  /** 顶部的灰色菜单文字 **/
+  .top-bar .top-bar2 .time-bt  a{
+    color:#0F51E9;
+    line-height: 30px;
+    padding-left: 10px;
+    text-decoration: none;
+  }
+  .top-bar .top-bar2 .time-bt  a:hover{
+      color: #EB4F31;
+  }
+  /** APP下载链接 **/
+  .top-bar-left{
+      float: right;
   }
 /** 顶部导航菜单 **/
 .top-dh{
