@@ -143,32 +143,28 @@ html , body{
     font-size: 20px;
 }
 .box .box-hd .top-search .cx{
-    height: 54px;
+    height: 50px;
     display: inline-block;
     line-height: 53px;
-    padding: 0 18px;
-    background-color: #fff;
+    padding: 0 14px;
     color: #000;
     white-space: nowrap;
-    text-align: center;
     font-size: 14px;
     cursor: pointer;
-    outline: none;
-    border-color: #ff6700;
+    border:2px solid #ff6700;
+    text-decoration: none;
 }
 
 .box .box-hd .top-search .search:hover ,
-.box .box-hd .top-search .search:hover + button {
+.box .box-hd .top-search .search:hover + a {
     border-color:  #334DFF;
 }
 .box .box-hd .top-search .cx:hover{
-    border-color:  #334DFF;
+    background-color: #f4914f;
+    color: white;
+   border-color:  #e68b6f;
 }
 
-.box .box-hd .top-search .search:focus ,
-.box .box-hd .top-search .search:focus + button {
-    border-color:  #ff6700;
-}
 
 /** 公告框 **/
 .box .notice{
@@ -220,8 +216,7 @@ html , body{
 .box-bd .cp-list li:hover {
     /* display: block; */
     background-color: #FF5722;
-    border-radius: 10px;
-    
+    border-radius: 10px; 
 }
 .box-bd .cp-list li > a:hover{
     color: white;
@@ -243,12 +238,12 @@ html , body{
 } */
 
 /** 产品图片 **/
-.box-ft a + img{
+.box-ft a + img , .cp-table{
     width: 100%;
     box-shadow:0px 0px 8px #d9d9d9;
     z-index: 0;
 }
-.box-ft a + img:hover{
+.box-ft a + img:hover , .cp-table:hover{
     border-radius: 5px;
     box-shadow:0px 0px 12px #3A3D3B;
 }
@@ -260,3 +255,37 @@ html , body{
     bottom: 70px;
     z-index: 0;
 }
+/** 产品表格框 **/
+.cp-table{
+    width: 100%;
+    border-collapse:collapse;
+    
+}
+/** 产品表标题 **/
+.cp-table tbody th{
+    text-align:center;
+    font-size: 20px;
+    font-weight: bold;
+}
+/** 产品表副标题 **/
+.cp-table .column{
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align:center;
+    width: 20%;
+    vertical-align: middle;
+}
+/** 产品表各元素 **/
+table, td, th{
+    border:1px solid #d9d9d9;
+    padding: 10px;
+  }
+  /* * 产品表内容 * */
+  .cp-table .column-nr{
+      font-size: 0.9rem;
+      padding-left: 20px;
+      
+  }
+  .cp-table .column-gjz{
+    color: tomato;
+  }
