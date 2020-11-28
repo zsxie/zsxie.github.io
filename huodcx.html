@@ -14,6 +14,7 @@
             <div class="top-bar2">
                 <ul class="time">
                     <li>
+                        <span id="hello"></span>
                         <span id="time"></span>
                         <span id="con"></span>
                     </li>
@@ -31,7 +32,7 @@
                 </ul>
             </div>
         </div>
-        <div class="top"><a class="top-wz" href="javascript:scroll(0,0)">回顶部</a></div>
+        <div class="top gongyong"><a class="top-wz" href="javascript:void(0);">回顶部</a></div>
         <div class="box">
             <div class="top-nav"></div>
             <div class="notice">
@@ -257,6 +258,7 @@
             </div>
         </div>
     </div>
+    
     <script>//模糊查询，感谢“一个人乐的小兔子”
         function myfunction() {
             var input, filter, ul, li, a ,img;
@@ -299,6 +301,58 @@
                 con.innerHTML = ( f + "时" + g + "分" + s + "秒" );
 }
         </script>
+         <script>//问候
+            function getTimeGreat() {
+                var h = (new Date()).getHours();
+                if (h >= 10 && h < 12)
+                    return "上午好";
+                if (h >= 13 && h < 18)
+                    return "下午好";
+                if (h >= 12 && h < 13)
+                    return "中午好";
+                if (h >= 18 && h < 22)
+                    return "晚上好";
+                if (h >= 22 && h <= 24 || h >= 0 && h < 6)
+                    return "深夜好";
+                if (h >= 6 && h < 10)
+                    return "早上好";
+            }
+            $("#hello").html(getTimeGreat());
+            </script>
+            <script>//TOP返回顶部 底部
+                $(function() {
+                    $(window).scroll(function() {
+                        if ($(window).scrollTop() >= 300) {
+                            $('.gongyong a').fadeIn(600);
+                        } else {
+                            $('.gongyong a').fadeOut(600);
+                        }
+                    });
+                    $('.gongyong a').hover(function() {
+                        $(this).addClass('hover');
+                    }, function() {
+                        $(this).removeClass('hover');
+                    });
+                    $('.top a').click(function() {
+                        $("html,body").animate({
+                            scrollTop: 0
+                        }, 0);
+                    });
+                });
+            </script>
+               <script>//如果下滑则top隐藏
+                $(function() {
+                    $(window).scroll(function() {
+                        if ($(window).scrollTop() >= 300) {//如果下滑≥300px
+                            $('.top-bar').css("display", "none"); //则隐藏.top-bar元素
+                            $('.top-dh').css("top", "0"); //则设置.top-dh元素的top值
+                        } else { //否则
+                            $('.top-bar').css("display", "");//否则此元素显示
+                            $('.top-dh').css("top", "30px");//否则此元素top设置为30px
+                        }
+                    });
+                });
+            </script>
     <script>//腾讯分析
         var _mtac = {};
         (function() {
