@@ -92,7 +92,7 @@ html , body{
     position: relative;
 }
 /** top返回顶部 **/
-.top a{
+.top , .top a{
     width:50px;
 	height:50px;
 	background:rgb(221, 125, 125);
@@ -104,8 +104,9 @@ html , body{
     left: 77%;
     opacity: .8; 
 	text-decoration:none;
-    display:none;
+    display: none;
     border-radius: 5px;
+    z-index: 9999;
 }
 .top a{
     display: block;
@@ -231,6 +232,10 @@ html , body{
     color: #006DC9;
     padding: 10px;
 }
+/** 给活动标识框字体单独增加颜色 **/
+.box-bd .cp-list .cp-color{
+    color:#039b81;
+}
 /* .box-bd .cp-list li > a::after{
     content: '|';
     color: salmon;
@@ -248,8 +253,8 @@ html , body{
     border-radius: 5px;
     box-shadow:0px 0px 12px #3A3D3B;
 }
-/** 隐藏产品名  bottom: 70px;**/
-.box-ft a.cp-name{
+/** 标题定位的产品名**/
+.box-ft a{
     opacity: 0;
     font-size: 1px;
     position: relative;
@@ -294,29 +299,31 @@ table, td, th{
    /*  页面底部  */
 .foot{
     margin-top: 40px;
-    height: 130px;
+    width: 100%;
+    height: 50px;
+    background-color:#2e2f33;
+}
+.foot .foot-zj {
+    width: 900px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
     background-color: #2e2f33;
 }
-.foot .foot-zj{
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-}
-.foot .foot-zj .hr{
+/*  页面底部横线  */
+/* .foot .foot-zj .hr{
     height: 1px;
     background: #414141;
+} */
+/*  页面底部文字  */
+.foot .foot-zj .copyright span,
+.foot .foot-zj .copyright span > a{
+    color: #6f6f72;
+    text-decoration: none;
+    font-size: 0.7rem;
+    line-height: 50px;
 }
-.foot .foot-zj .copyright{
-    padding-top: 40px;
+.foot .foot-zj .copyright span{
+    padding-left: 20px;
 }
 
-.foot .foot-zj .copyright span{
-    color: #585859;
-    font-size: 12px;
-    
-}
-.foot .foot-zj .yunx{
-    padding: 20px;
-    color: #696974;
-    font-size: 20px;
-}
