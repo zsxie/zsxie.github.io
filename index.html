@@ -11,7 +11,15 @@
     <link rel="stylesheet" href="./share/index.min.css">
 </head>
 <body>
+    <!--公告框-->
+    <div class="gg-content" id="first">
+        <div> 
+            <div id="ga-content">测试内容</div>
+            <div class="gg-k">我知道了</div>
+        </div>
+    </div>
     <div class="wrap">
+ <!--top灰色框-->       
         <div class="top-bar" id="top-barjs">
             <div class="top-bar2">
                 <ul class="time-bt">
@@ -96,6 +104,18 @@
             yun.innerHTML = ("已出发: " + A + "天" + B + "小时" + C + "分");
         }
         setInterval(runtime, 1000); runtime();
+    </script>
+    <script> //设置指定元素打开页面时，只显示一次
+    if(!window.sessionStorage.getItem('storge')){
+        document.getElementById('first').style.display ='block';
+        window.sessionStorage.setItem('storge','true')
+    }
+    $(document).ready(function() {
+        //点击GGK元素
+        $(".gg-k").click(function() {
+            $('.gg-content').css('display', 'none');  
+        });//点击GGK元素，改变gg-content 的display为因此
+    });
     </script>
     <script>//腾讯分析
         var _mtac = {};
