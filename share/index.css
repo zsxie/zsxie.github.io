@@ -95,13 +95,13 @@ html , body{
 .top , .top a{
     width:50px;
 	height:50px;
-	background:rgb(221, 125, 125);
+	background:rgb(202, 91, 91);
 	color:#fff;
 	position:fixed;
 	text-align:center;
 	line-height:50px;
     top: 80%;
-    left: 77%;
+    left: 80%;
     opacity: .8; 
 	text-decoration:none;
     display: none;
@@ -146,7 +146,7 @@ html , body{
 .box .box-hd .top-search .cx{
     height: 50px;
     display: inline-block;
-    line-height: 50px;
+    line-height: 54px;
     padding: 0 14px;
     color: #000;
     white-space: nowrap;
@@ -181,7 +181,8 @@ html , body{
 .box .notice .txt{
     padding: 5px;
 }
-.box .notice .gg{
+/** TOP公告框 **/
+.box .notice .gg  {
     position: absolute;
     width: 5%;
     height: 20px;
@@ -190,7 +191,10 @@ html , body{
     background-color: white;
     text-align: center;
     border-radius: 10px;
-
+}
+.gg .gg-wz{
+    text-decoration: none;
+    color: #000;
 }
 /** 产品框 **/
 .box-bd {
@@ -327,7 +331,7 @@ table, td, th{
     padding-left: 20px;
 }
  /* 弹出框样式  */
- .gg-content{
+ /* .gg-content{
     position: absolute;
     top: 200px;
     left: 250px;
@@ -351,4 +355,60 @@ table, td, th{
     line-height: 20px;
     background-color: rgb(223, 75, 30);
     margin-top: 20px;
+} */
+
+/* TOP导航下拉菜单  */
+.nav-list{
+    position: relative;
+}
+.nav-list:hover  .nav-more{/* hover>nav-list,旋转倒三角  */
+    transform: rotate(180deg);
+    top: 15px;
+}
+.nav-list:hover .nav-top-list{
+    display: block;
+}
+.nav-list .nav-top-list{
+    margin-top: 3px;
+    line-height: 35px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+    border: 1px solid #d2d2d2;
+    background-color: #fff;
+    z-index: 100;
+    display: none;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 9999;
+}
+.nav-list .nav-top-list dd{
+    text-align: center;
+    border-bottom: 1px solid rgb(219, 213, 213);
+}
+.nav-list .nav-top-list dd:hover ,
+.nav-list .nav-top-list dd > a:hover{
+    background-color: #009688;
+    color: white;
+}
+.nav-list .nav-top-list dd > a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    height: 35px;
+}
+/* TOP导航下拉菜单倒三角  */
+.nav-list .nav-more{
+    content: '';
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-color: #C50505;
+    cursor: pointer;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    position: absolute;
+    left: 100%;
+    top: 20px;
+    border-width: 7px;
+    border-top-color: #fff;
+    z-index: 99999;
 }

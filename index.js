@@ -571,7 +571,7 @@ var list2 = [{
 {
     p_id: 3,
     p_name: "视频类会员",
-    p_word: "视频类会员",
+    p_word: "12个月视频类会员24",
     P_img: " http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3CwNJNFNXMxjiGg.7Qse9C8LZBNPVpqUjq8xAA.msLr*kitlr8zmauykpGzfw1EGrIz163ZZjRHIIoj0r2X8wUQ!/r "
 },
 {
@@ -586,24 +586,24 @@ var list2 = [{
     p_word: "抖音春节50元话费",
     P_img: " http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3JazaUKkWI5KdVcPsWwIhD.hagNCX3k6GJbtj.hA8HTbfMnW*jkS8ZFL5d2ziUAzLXsDNwpPjoOCx8sZk5GLjag!/r "
 },
-// {
-//     p_id: 6,
-//     p_name: "春节-12个月超会",
-//     p_word: "春节12个月超会",
-//     P_img: " "
-// },
+{
+    p_id: 6,
+    p_name: "领50元话费",
+    p_word: "领50元话费",
+    P_img: " http://r.photo.store.qq.com/psc?/V52EBLlE2IOCJp3qS4Qn03S0oG3SFEAS/TmEUgtj9EK6.7V8ajmQrEL7m2csrsBg9o99eDXxof8RGrmiVqSJeR4yz4rduQG1UXiBEEqk9QmANFXFUy75iL6llOoZKkqWVeiIaFvNROAY!/r "
+},
 {
     p_id: 7,
     p_name: "快手卡限时2400",
     p_word: "快手卡限时2400",
     P_img: " http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3A4nYEsCti*VTtYjGsilK8PSnjrviJNJCdDi1wNKrP**fhHR0Gbw9AUSCZES7v3643cHGzKd0GktK9zJccJ5usc!/r "
 },
-// {
-//     p_id: 8,
-//     p_name: "春节腾讯视频VIP",
-//     p_word: "春节腾讯视频VIP",
-//     P_img: " "
-// },
+{
+    p_id: 8,
+    p_name: "三国杀权益",
+    p_word: "三国杀权益",
+    P_img: " http://r.photo.store.qq.com/psc?/V52EBLlE2IOCJp3qS4Qn03S0oG3SFEAS/TmEUgtj9EK6.7V8ajmQrENlnpz2TFjmGYqaCo6KZdk8J0SpVrR5zYSACLT.3*eGd2v8gniOHrxe.9b*bTMazLsSDi4*hwV0egZsF3UGp6M4!/r",
+},
 {
     p_id: 9,
     p_name: "王卡-不首冲",
@@ -766,12 +766,12 @@ var list2 = [{
     p_word: "腾讯大王福利卡",
     P_img: " http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/JBM4Sl1ltgGH1NeP*qvP3MR36eFakBjIjIOUPpOmooQyPladOY0*q6X8vebtBSq.gCmsfVTohgwZe.Lnb9uENJf8KIZSYKCywND*VfMJ2zA!/r "
 },
-// {
-//     p_id: 36,
-//     p_name: "京东活动-勿强制充值",
-//     p_word: "京东活动勿强制充值",
-//     P_img: " "
-// },
+{
+    p_id: 36,
+    p_name: "29元视频卡-骑士版",
+    p_word: "29元视频卡骑士版",
+    P_img: " http://r.photo.store.qq.com/psc?/V52EBLlE2IOCJp3qS4Qn03S0oG3SFEAS/TmEUgtj9EK6.7V8ajmQrEDCHeRd03ihNY*4kLUf5st7KmnVSaA2VAN7v2nGx7qM4It12*zVxPBc8ssklwVqs76N0vBmdkwG1s8ao0G4H8ik!/r "
+},
 {
     p_id: 37,
     p_name: "29元视频卡",
@@ -806,7 +806,7 @@ var list2 = [{
 //     p_id: 42,
 //     p_name: "首充享美团外卖会员",
 //     p_word: "首充享美团外卖会员",
-//     P_img: " "
+//     P_img: "1 "
 // },
 {
     p_id: 43,
