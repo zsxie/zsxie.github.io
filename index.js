@@ -803,10 +803,10 @@ var list2 = [{
     P_img: " http://r.photo.store.qq.com/psc?/V124chEp2Heblw/TmEUgtj9EK6.7V8ajmQrEBuLM6nhXSdLkP99wT1LVxwOdP08WlFW2khPeDvqeB.wPVKATyiNQDsGLWAUOoR2YGl9IHrbTHAM92xecezT8m0!/r "
 },
 {
-    p_id: 42,
-    p_name: "首充享美团外卖会员",
-    p_word: "首充享美团外卖会员",
-    P_img: "1 "
+    // p_id: 42,
+    // p_name: "首充享美团外卖会员",
+    // p_word: "首充享美团外卖会员",
+    // P_img: "1 "
 },
 {
     p_id: 43,
