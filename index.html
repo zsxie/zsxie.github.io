@@ -5,10 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1">
     <title>CQDD业务查询</title>
-    <script src="./jQuery/jquery-2.2.2.min.js"></script>
-    <script src="./index.min.js"></script>
-    <link rel="stylesheet" href="./share/reset.css">
-    <link rel="stylesheet" href="./share/index.min.css">
+    <!-- <script src="./jQuery/jquery-2.2.2.min.js"></script> -->  
+    <!-- <script src="./index.min.js"></script> -->    
+    <!-- <link rel="stylesheet" href="./share/reset.css"> -->
+    <!-- <link rel="stylesheet" href="./share/index.min.css"> -->
+<!-----CDN----->  
+    <script src="https://cdn.jsdelivr.net/gh/zsxie/zsxie.github.io/jQuery/jquery-2.2.2.min.js"></script><!--CDN加速js-->
+    <script src="https://cdn.jsdelivr.net/gh/zsxie/zsxie.github.io/index.min.js"></script><!--CDN加速js-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zsxie/zsxie.github.io/share/reset.css"><!--CDN加速css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zsxie/zsxie.github.io/share/index.min.css"><!--CDN加速css--> 
 </head>
 <body>
     <div class="wrap">
@@ -20,23 +25,27 @@
                         <span id="hello"></span>
                         <span id="time"></span>
                         <span id="con"></span>
-                        <span class="top-bar-left">
-                            <a class="top-doc" href="https://msgo.10010.com/newMsg/personCenter/html/download.html" target="_blank">码上购-安卓</a>
-                            <a class="top-doc" href="https://m.10010.com/msgo2/ios/msgo.html" target="_blank">码上购-苹果</a>
-                            <a class="top-doc" href="http://d.firim.pro/yhh9?utm_source=fir&utm_medium=qr" target="_blank">沃行销-安卓</a>
-                            <a class="top-doc" href="http://d.firim.top/fw83?utm_source=fir&utm_medium=qr" target="_blank">沃行销-苹果</a>
-                            <a class="top-doc" href="https://wxxapp.chinaunicom.cn:10091/downloadApp/shareApp.htm" target="_blank">蜂行动APP</a>
-                            <a class="top-doc" href="https://m.10010.com/zst/download/index.html" target="_blank">掌沃通APP</a>
-                        </span>
                     </li>
                 </ul>
             </div>
         </div>
+<!--top导航框-->   
         <div class="top-dh">
             <div class="top-dh2">
                 <ul class="nav-wz">
                     <li><a href="./huodcx.html">活动标识查询</a></li>
-                    <li class="down-wc"><a class="doc" href="https://www.showdoc.com.cn/p/c67767bca3b334c2528da6ea444b4615" >行销二维码</a></li>
+                    <li class="nav-list"><a href="javascript:;" >APP下载二维码</a>
+                        <span class="nav-more"></span>
+                        <dl class="nav-top-list top-color">
+                            <dd><a href=" https://www.showdoc.com.cn/p/c67767bca3b334c2528da6ea444b4615 "  target="_blank">APP二维码汇总</a></dd>
+                            <dd><a class="msg-color" href=" https://msgo.10010.com/newMsg/personCenter/html/download.html "  target="_blank">下载码上购-安卓</a></dd>
+                            <dd><a class="msg-color" href=" https://m.10010.com/msgo2/ios/msgo.html " target="_blank">下载码上购-IOS</a></dd>
+                            <dd><a class="wxx-color" href=" http://d.firim.pro/yhh9 "  target="_blank">下载沃行销-安卓</a></dd>
+                            <dd><a class="wxx-color" href=" http://d.firim.top/fw83 "  target="_blank">下载沃行销-IOS</a></dd>
+                            <dd><a class="fxd-color" href=" https://wxxapp.chinaunicom.cn:10091/downloadApp/shareApp.htm " target="_blank">下载蜂行动-APP</a></dd>
+                            <dd><a class="zwt-color" href=" https://m.10010.com/zst/download/index.html " target="_blank">下载掌沃通-APP</a></dd>
+                        </dl>
+                    </li>
                     <li class="nav-list"><a href="javascript:;" >行销操作手册</a>
                         <span class="nav-more"></span>
                         <dl class="nav-top-list">
@@ -46,7 +55,7 @@
                             <dd><a href=" https://kdocs.cn/l/ssAj4KhKM7w6 " target="_blank">下沉单操作手册</a></dd>
                         </dl>
                     </li>
-                    <li><a href="https://www.showdoc.com.cn/fgszf?page_id=4417469846037763" target="_blank">交付案列分享</a></li>
+                    <li><a href="https://www.showdoc.com.cn/fgszf?page_id=4417469846037763" target="_blank">交付案例分享</a></li>
                 </ul>
             </div>
         </div>
@@ -79,14 +88,16 @@
                 <ul id="list" class="cp-js"></ul>
             </div>
         </div>
-        <div class="foot .clearfix">
+<!--页面底部区域--> 
+        <div class="foot">
             <div class="foot-zj">
-                <div class="hr"></div>
-                <div class="copyright">
-                    <span>Copyright © <a href="https://www.wenjuan.com/s/UZBZJvLCxE/" title="联系我">XP</a> 2020年11月28日 - <i id="now-year"></i>
-                        CQDD.TOP</span>
-                    <span class="yunx" id="yun"></span>
-                </div>
+                <span>Copyright © <a href="https://www.wenjuan.com/s/UZBZJvLCxE/" title="联系我" target="_blank">XP</a> 2020年11月28日 - <i id="now-year"></i> CQDD.TOP</span>
+                <span class="yunx" id="yun"></span>
+                <!-- 不蒜子计数 -->
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                <span id="busuanzi_container_site_pv" style='display:none'>PV <i id="busuanzi_value_site_pv"></i> 次</span>
+                <span id="busuanzi_container_site_uv" style='display:none'>UV <i id="busuanzi_value_site_uv"></i> 人</span>
+                <!-- 不蒜子计数 -->
             </div>
         </div>
     </div>
@@ -102,7 +113,7 @@
     <script>//问候     
         $("#hello").html(getTimeGreat());
     </script>
-    <script type="text/javascript">//本站运行XX天
+    <script type="text/javascript">//运行XX天
         function runtime() {
             yun.innerHTML = ("已出发: " + A + "天" + B + "小时" + C + "分");
         }
@@ -120,7 +131,7 @@
         });//点击GGK元素，改变gg-content 的display为因此
     });
     </script> -->
-    <!-- <script>//腾讯分析
+    <script>//腾讯分析
         var _mtac = {};
         (function () {
             var mta = document.createElement("script");
@@ -130,7 +141,7 @@
             var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(mta, s);
         })();
-    </script> -->
+    </script>
 </body>
 
 </html>
