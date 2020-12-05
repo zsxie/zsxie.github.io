@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1">
     <title>CQDD业务查询</title>
-    <!-- <script src="./jQuery/jquery-2.2.2.min.js"></script> -->  
-    <!-- <script src="./index.min.js"></script> -->    
-    <!-- <link rel="stylesheet" href="./share/reset.css"> -->
-    <!-- <link rel="stylesheet" href="./share/index.min.css"> -->
+    <script src="./jQuery/jquery-2.2.2.min.js"></script>  
+    <script src="./index.min.js"></script>    
+    <link rel="stylesheet" href="./share/reset.css">
+    <link rel="stylesheet" href="./share/index.min.css">
 <!-----CDN----->  
-    <script src="https://cdn.jsdelivr.net/gh/zsxie/zsxie.github.io/jQuery/jquery-2.2.2.min.js"></script><!--CDN加速js-->
-    <script src="https://cdn.jsdelivr.net/gh/zsxie/zsxie.github.io/index.min.js"></script><!--CDN加速js-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zsxie/zsxie.github.io/share/reset.css"><!--CDN加速css-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zsxie/zsxie.github.io/share/index.min.css"><!--CDN加速css--> 
+    <!-- <script src="https://cdn.jsdelivr.net/gh/zsxie/zsxie.github.io/jQuery/jquery-2.2.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/zsxie/zsxie.github.io/index.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zsxie/zsxie.github.io/share/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zsxie/zsxie.github.io/share/index.min.css "> --> 
 </head>
 <body>
     <div class="wrap">
@@ -84,12 +84,11 @@
         <div class="foot">
             <div class="foot-zj">
                 <span>Copyright © <a href="https://www.wenjuan.com/s/UZBZJvLCxE/" title="联系我" target="_blank">XP</a> 2020年11月28日 - <i id="now-year"></i> CQDD.TOP</span>
-                <span class="yunx" id="yun"></span>
                 <!-- 不蒜子计数 -->
                 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
                 <span id="busuanzi_container_site_pv" style='display:none'>PV <i id="busuanzi_value_site_pv"></i> 次</span>
                 <span id="busuanzi_container_site_uv" style='display:none'>UV <i id="busuanzi_value_site_uv"></i> 人</span>
-                <!-- 不蒜子计数 -->
+                <span class="yunx" id="yun"></span>
             </div>
         </div>
     </div>
@@ -99,13 +98,31 @@
             $(".cp-list").append(`<li><a href=#${ele.p_id} class="cp-color">${ele.p_name}</a> 
                 </li>`);//  创建产品标题表
             $(".cp-js").append(`<li><a id=${ele.p_id}>${ele.p_word}</a>
-                <img src=${ele.P_img}></li></ul>`) //  创建产品框列表
+                <img src=${ele.P_img}></li>` );//  创建产品框列表         
         });
     </script>
-    <script>//问候     
+    <script> //  产品从JS中获取到HTML
+        lists.forEach(elea => {
+             //在指定元素下创建创建表格元素
+            $(".cp-list").append(`<li><a href=#${elea.p_id} class="cp-color">${elea.p_name}</a> 
+                </li>`);//  创建产品标题表
+            $(".cp-js").append(`<li><a id=${elea.p_id}>${elea.p_word}</a>
+				<table class="cp-table"><tbody><th colspan="2">${elea.p_bt}</th></tbody>
+				<tr><th>活动标识</th>
+				<td>${elea.P_bs}</td></tr>
+				<tr><th>领取条件</th>
+				<td>${elea.P_tj}</td></tr>
+				<tr><th>领取关键字</th>
+				<td>${elea.P_gjz}</td></tr>
+				<th>活动介绍</th>
+				<td>${elea.P_js}</td></tr>	
+				</table></li>`) //  创建表格列表
+    	});
+	</script>
+    <script>//问候  
         $("#hello").html(getTimeGreat());
     </script>
-    <script type="text/javascript">//本站运行XX天
+    <script type="text/javascript">//运行XX天
         function runtime() {
             yun.innerHTML = ("已出发: " + A + "天" + B + "小时" + C + "分");
         }

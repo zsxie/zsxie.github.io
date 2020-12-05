@@ -791,10 +791,10 @@ var list2 = [{
     P_img: " http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/TmEUgtj9EK6.7V8ajmQrENq*DJ*OUjYLSgWU0JFkBf0hupjRJ.SVkSUW9DLbvPLgNBNcqCK52HFZe5OGbrLLOq3o.f2TZVeqA8uECe45rX8!/r "
 },
 {
-    p_id: 40,
-    p_name: "1个月腾讯VIP",
-    p_word: "1个月腾讯VIP",
-    P_img: " "
+    // p_id: 40,
+    // p_name: "1个月腾讯VIP",
+    // p_word: "1个月腾讯VIP",
+    // P_img: " "
 },
 {
     p_id: 41,
@@ -802,12 +802,12 @@ var list2 = [{
     p_word: "首充领爱奇艺会员",
     P_img: " http://r.photo.store.qq.com/psc?/V124chEp2Heblw/TmEUgtj9EK6.7V8ajmQrEBuLM6nhXSdLkP99wT1LVxwOdP08WlFW2khPeDvqeB.wPVKATyiNQDsGLWAUOoR2YGl9IHrbTHAM92xecezT8m0!/r "
 },
-// {
-//     p_id: 42,
-//     p_name: "首充享美团外卖会员",
-//     p_word: "首充享美团外卖会员",
-//     P_img: "1 "
-// },
+{
+    p_id: 42,
+    p_name: "首充享美团外卖会员",
+    p_word: "首充享美团外卖会员",
+    P_img: "1 "
+},
 {
     p_id: 43,
     p_name: "首充领2400快币",
@@ -819,5 +819,34 @@ var list2 = [{
     p_name: "送车轮车主权益",
     p_word: "送车轮车主权益",
     P_img: " http://r.photo.store.qq.com/psc?/V52EBLlE2IOCJp3qS4Qn03S0oG3SFEAS/TmEUgtj9EK6.7V8ajmQrEKwgyXU6I*lHgnQqRJ54sGEm0Mcesl6mraflpT6mRwW7uD*qvS92kPMT66.6CmNH5WAJXKVMrPinDclKaRLOxYc!/r "
+},
+{
+    p_id: 45,
+    p_name: "首充享美团外卖会员" ,
+    p_word: "首充享美团外卖会员" ,
+    P_img: " http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/TmEUgtj9EK6.7V8ajmQrEBSGtVjfw35JXWxH.7qcOxDB76w2IaTqM2SFCgpBwBJ0iR2.c1raYFdRY1fbxMcK43IpcBmVgRnLJo2XKtX0Ycc!/r "
+},
+{
+    p_id: 46,
+    p_name: "送陀螺算力" ,
+    p_word: "送陀螺算力" ,
+    P_img: " http://r.photo.store.qq.com/psc?/V124chEp0JmWVy/TmEUgtj9EK6.7V8ajmQrEODmf8xsHA.ax3YgwADMoUvzj1aJ9UP48VlYz7JTZ3Y0EYmFywn8j7UxCpQQEVTUlLTtrfJhYNtO5l94gcGte7s!/r ",
+    P_bs: " 1个月腾讯VIP活动标识 ", //标识
+    P_tj: " 首充≥50元 ", //条件
 }
+
 ];
+
+//产品活动表格
+var lists = [{
+    p_id: 40,
+    p_name: " 1个月腾讯视频VIP ",
+    p_word: " 1个月腾讯视频VIP ",
+    //表格元素
+    p_bt: " 首充≥50得1个月腾讯视频VIP活动 ", //产品标题
+    P_bs: " 1个月腾讯视频VIP ", //标识
+    P_tj: " 首充≥50元 ", //条件
+    P_gjz: " 腾讯视频VIP领取 ", //关键字
+    P_js: " “王卡助手”微信公众号—发送“腾讯视频VIP领取”—点击图文领取会员 ", //介绍
+}
+];  

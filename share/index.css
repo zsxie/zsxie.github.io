@@ -1,3 +1,4 @@
+
 html , body{
     font-size: 15px;
     font-family:  "微软雅黑";
@@ -216,6 +217,8 @@ html , body{
 }
 .box-bd .cp-list li{
     margin-top: 5px;
+    margin-left: 1px;
+    border-radius: 5px;
 }
 
 /** 产品框移入效果 **/
@@ -304,30 +307,23 @@ table, td, th{
 .foot{
     margin-top: 40px;
     width: 100%;
-    height: 50px;
     background-color:#2e2f33;
 }
 .foot .foot-zj {
     width: 900px;
-    height: 50px;
     margin: 0 auto;
     text-align: center;
     background-color: #2e2f33;
 }
-/*  页面底部横线  */
-/* .foot .foot-zj .hr{
-    height: 1px;
-    background: #414141;
-} */
 /*  页面底部文字  */
-.foot .foot-zj .copyright span,
-.foot .foot-zj .copyright span > a{
+.foot .foot-zj span,
+.foot .foot-zj span > a{
     color: #6f6f72;
     text-decoration: none;
     font-size: 0.7rem;
     line-height: 50px;
 }
-.foot .foot-zj .copyright span{
+.foot .foot-zj span{
     padding-left: 20px;
 }
  /* 弹出框样式  */
@@ -357,11 +353,11 @@ table, td, th{
     margin-top: 20px;
 } */
 
-/* TOP导航下拉菜单  */
-.nav-list{
+/* TOP导航下拉菜单 行销操作手册  */
+.nav-list , .down-wc{
     position: relative;
 }
-.nav-list:hover  .nav-more{/* hover>nav-list,旋转倒三角  */
+.nav-list:hover .nav-more{/* hover>nav-list,旋转倒三角  */
     transform: rotate(180deg);
     top: 15px;
 }
@@ -395,8 +391,26 @@ table, td, th{
     color: #000;
     height: 35px;
 }
+
+/* TOP导航下拉菜单 APP二维码  */
+/* .top-color a:nth-child(2)  {
+    color: crimson;
+} */
+/* TOP导航下拉菜单 APP文字颜色  */
+.nav-list .top-color .msg-color{
+    color: #2F68D5;
+}
+.nav-list .top-color .wxx-color{
+    color:#E74C2E;
+}
+.nav-list .top-color .fxd-color{
+    color:#F0A200;
+}
+.nav-list .top-color .zwt-color{
+    color:#0045F0;
+}
 /* TOP导航下拉菜单倒三角  */
-.nav-list .nav-more{
+.nav-more{
     content: '';
     width: 0;
     height: 0;
@@ -411,4 +425,29 @@ table, td, th{
     border-width: 7px;
     border-top-color: #fff;
     z-index: 99999;
+}
+
+/* 给最后2个产品标题添加更新背景  */
+.bs-list li:last-child ,  /* 最后1个元素 */
+.bs-list li:nth-last-child(2){  /* 倒数第2个元素 */
+    background-color: yellow;
+}
+/* 活动表格  */
+table.cp-table{
+    border-collapse: collapse;
+    color: #666;
+    width: 100%;
+}
+table.cp-table th{
+    width:20%;
+    text-align: center;
+}		
+table.cp-table td,th{
+    padding: 10px;
+    min-height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e6e6e6;
 }
