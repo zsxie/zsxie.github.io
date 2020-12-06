@@ -435,7 +435,7 @@ table, td, th{
 /* 活动表格  */
 table.cp-table{
     border-collapse: collapse;
-    color: #666;
+    color: #000;
     width: 100%;
 }
 table.cp-table th{
