@@ -83,7 +83,8 @@
 <!--页面底部区域-->       
         <div class="foot">
             <div class="foot-zj">
-                <span>Copyright © <a href="https://www.wenjuan.com/s/UZBZJvLCxE/" title="联系我" target="_blank">XP</a> 2020年11月28日 - <i id="now-year"></i> CQDD.TOP</span>
+                <span>Copyright © <a href="https://www.wenjuan.com/s/UZBZJvLCxE/" title="联系我" target="_blank">XP</a> 2020年11月28日 - <i id="now-year"></i> DDDOC.TOP</span>
+                <span><a href="https://beian.miit.gov.cn" target="_blank">渝ICP备2020014371号-1</a></span>
                 <!-- 不蒜子计数 -->
                 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
                 <span id="busuanzi_container_site_pv" style='display:none'>PV <i id="busuanzi_value_site_pv"></i> 次</span>
@@ -107,18 +108,52 @@
             $(".cp-list").append(`<li><a href=#${elea.p_id} class="cp-color">${elea.p_name}</a> 
                 </li>`);//  创建产品标题表
             $(".cp-js").append(`<li><a id=${elea.p_id}>${elea.p_word}</a>
-				<table class="cp-table"><tbody><th colspan="2">${elea.p_bt}</th></tbody>
+                <table class="cp-table" id="copyText">
+                <tbody><th colspan="2"><input type="button" id="Copy" value="点击复制代码" />${elea.p_bt}</th></tbody>
 				<tr><th>活动标识</th>
-				<td>${elea.P_bs}</td></tr>
+				<td><span class="hd-tips">${elea.P_bs}</span></td></tr>
 				<tr><th>领取条件</th>
 				<td>${elea.P_tj}</td></tr>
 				<tr><th>领取关键字</th>
 				<td>${elea.P_gjz}</td></tr>
-				<th>活动介绍</th>
-				<td>${elea.P_js}</td></tr>	
-				</table></li>`) //  创建表格列表
+				<th>规则介绍</th>
+                <td>${elea.P_js}</td></tr>	
+                </table></li>`) //  创建表格列表
+                
     	});
-	</script>
+    </script>
+    <script type="text/javascript"> //  复制表格文本
+        $("#Copy").click(function() {
+            var ssrsss = $("#copyText").text();//获取文本
+            var flag = copyText(ssrsss); //传递文本
+            // alert(flag ?  window.location.href = 'weixin://' : "复制失败咯咯！");
+            if (flag = true){
+                alert("复制成功啦啦,即将打开微信！");
+                window.location.href = 'weixin://' ;
+            }else{
+                alert("复制失败咯咯！");
+            }
+        })
+        function copyText(text) {
+            var textarea = document.createElement("input");//创建input对象
+            var currentFocus = document.activeElement;//当前获得焦点的元素
+            document.body.appendChild(textarea);//添加元素
+            textarea.value = text;
+            textarea.focus();
+            if(textarea.setSelectionRange)
+                textarea.setSelectionRange(0, textarea.value.length);//获取光标起始位置到结束位置
+            else
+                textarea.select();
+            try {
+                var flag = document.execCommand("copy");//执行复制
+            } catch(eo) {
+                var flag = false;
+            }
+            document.body.removeChild(textarea);//删除元素
+            currentFocus.focus();
+            return flag;
+        }
+    </script>
     <script>//问候  
         $("#hello").html(getTimeGreat());
     </script>
