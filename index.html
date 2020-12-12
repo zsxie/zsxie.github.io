@@ -18,7 +18,6 @@
 <body>
     <div class="wrap">
             <!--弹出框-->
-            <div class="gg-zz" id="first2"></div>
             <div class="gg-content" id="first">
                 <div> 
                     <div id="ga-content"><img src="./image/20201212.jpg" alt=""></div>
@@ -124,14 +123,13 @@
     <script> //设置指定元素打开页面时，只显示一次
         if(!window.sessionStorage.getItem('storge')){ 
             document.getElementById('first').style.display ='block';
-            document.getElementById('first2').style.display ='block';
             window.sessionStorage.setItem('storge','true')
         }
         $(document).ready(function() {
         //点击GGK元素
-        $(".gg-zz").click(function() {
+        $(".gg-content").click(function() {
             $('.gg-content').css('display', 'none'); 
-            $('.gg-zz').css('display', 'none'); 
+            $('.gg-content').css('display', 'none'); 
         });//点击GGK元素，改变gg-content 的display为因此
     });
     </script>
