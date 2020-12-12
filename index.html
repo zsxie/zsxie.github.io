@@ -17,6 +17,13 @@
 </head>
 <body>
     <div class="wrap">
+            <!--弹出框-->
+            <div class="gg-zz" id="first2"></div>
+            <div class="gg-content" id="first">
+                <div> 
+                    <div id="ga-content"><img src="./image/20201212.jpg" alt=""></div>
+                </div>
+            </div>
  <!--top灰色框-->       
         <div class="top-bar" id="top-barjs">
             <div class="top-bar2">
@@ -72,6 +79,7 @@
                     <a class="cx" href="https://www.wenjuan.com/s/UZBZJvLCxE/" target="_blank">意见反馈</a>
                 </div>
             </div>
+         
             <div class="box-bd" id="list-cp">
                 <!--产品标题列表-->
                 <ul class="cp-list" id="list"></ul>
@@ -84,7 +92,8 @@
 <!--页面底部区域--> 
         <div class="foot">
             <div class="foot-zj">
-                <span>Copyright © <a href="https://www.wenjuan.com/s/UZBZJvLCxE/" title="联系我" target="_blank">XP</a> 2020年11月28日 - <i id="now-year"></i> CQDD.TOP</span>
+                <span>Copyright © <a href="https://www.wenjuan.com/s/UZBZJvLCxE/" title="联系我" target="_blank">XP</a> 2020年11月28日 - <i id="now-year"></i> DDDOC.TOP</span>
+                <span><a href="https://beian.miit.gov.cn" target="_blank">渝ICP备2020014371号-1</a></span>
                 <!-- 不蒜子计数 -->
                 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
                 <span id="busuanzi_container_site_pv" style='display:none'>PV <i id="busuanzi_value_site_pv"></i> 次</span>
@@ -110,6 +119,21 @@
             yun.innerHTML = ("已出发: " + A + "天" + B + "小时" + C + "分");
         }
         setInterval(runtime, 1000); runtime();
+    </script>
+
+    <script> //设置指定元素打开页面时，只显示一次
+        if(!window.sessionStorage.getItem('storge')){ 
+            document.getElementById('first').style.display ='block';
+            document.getElementById('first2').style.display ='block';
+            window.sessionStorage.setItem('storge','true')
+        }
+        $(document).ready(function() {
+        //点击GGK元素
+        $(".gg-zz").click(function() {
+            $('.gg-content').css('display', 'none'); 
+            $('.gg-zz').css('display', 'none'); 
+        });//点击GGK元素，改变gg-content 的display为因此
+    });
     </script>
     <script>//腾讯分析
         var _mtac = {};
